@@ -2,9 +2,13 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 from db_connect import *
+from paviphonepe import *
+from parse import *
 connectOpen()
 st.title('PHONEPE_PULSE')
-
+if st.button('Refresh Data'):
+    cloneRepo()
+    populateData()
 states_record = get_states("aggregated_transaction")
 states_list = []
 for row in states_record:
