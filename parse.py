@@ -200,19 +200,14 @@ def Top_User():
     #Succesfully created a dataframe
     Top_User=pd.DataFrame(clm)
     top_Users_insertvalues(Top_User)
-
-
-       
-
-        
     
-
-connectOpen()
-createTbl()
-Agg_Tran()
-Agg_User()
-Map_Trans()
-Map_User()
-Top_Trans()
-Top_User()
-connectClose()
+def populateData():
+    connectOpen()
+    createTbl()
+    Agg_Tran()
+    Agg_User()
+    Map_Trans()
+    Map_User()
+    Top_Trans()
+    Top_User()
+    connectClose()
