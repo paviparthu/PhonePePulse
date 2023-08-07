@@ -202,7 +202,6 @@ def Top_User():
     top_Users_insertvalues(Top_User)
     
 def populateData():
-    connectOpen()
     createTbl()
     Agg_Tran()
     Agg_User()
@@ -210,4 +209,4 @@ def populateData():
     Map_User()
     Top_Trans()
     Top_User()
-    connectClose()
+    
